@@ -11,6 +11,6 @@ while true; do
   for PID in 50 31 40 45 46 49
   do
     sshpass -e ssh $USER@$IP "fan pid $PID lo $LO"
-    sleep 300
   done
+  sleep 300
 done
