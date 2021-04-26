@@ -15,4 +15,4 @@ ENV SSHPASS=pass_usuario
 ENV USER=pass
 ENV IP=0.0.0.0
 ENV LO=2500
-CMD while true; /fan_control.sh ; do sleep 300 ; done
+ENTRYPOINT /fan_control.sh
