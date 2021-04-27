@@ -5,7 +5,6 @@ COPY ./fan_control.sh /
 RUN echo "http://dl-cdn.alpinelinux.org/alpine/v3.7/community" >> /etc/apk/repositories  && \
     apk --update upgrade && \
     apk add  \
-    bash \
     openssh-client \
     sshpass && \
     rm -rf /var/cache/apk/* && \

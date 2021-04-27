@@ -10,7 +10,7 @@
 while true; do
   for PID in 50 31 40 45 46 49
   do
-    sshpass -e ssh $USER@$IP "fan pid $PID lo $LO"
+    sshpass -e ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -oKexAlgorithms=+diffie-hellman-group1-sha1 $USER@$IP "fan pid $PID lo $LO"
   done
   sleep 300
 done
